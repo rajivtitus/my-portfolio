@@ -26,6 +26,7 @@ const Contact = () => {
             href="mailto:rajivtitus92@gmail.com"
             style={{ textDecoration: "none" }}
             target="_blank"
+            rel="noopener noreferrer"
           >
             <span>rajivtitus92@gmail.com</span>
           </a>
@@ -73,11 +74,16 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img src={linkedin} alt="linkedin-icon"></img>
             </a>
 
-            <a href="https://github.com/rajivtitus" target="_blank">
+            <a
+              href="https://github.com/rajivtitus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={github} alt="github-icon"></img>
             </a>
           </motion.div>

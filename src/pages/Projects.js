@@ -30,6 +30,7 @@ const Projects = () => {
               objectFit: "cover",
             }}
             src="https://social-labs.org/wp-content/uploads/2015/07/teal-spectrum.png"
+            alt="project1"
           ></img>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
@@ -61,6 +62,7 @@ const Projects = () => {
               objectFit: "cover",
             }}
             src="https://social-labs.org/wp-content/uploads/2015/07/teal-spectrum.png"
+            alt="project2"
           ></img>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
