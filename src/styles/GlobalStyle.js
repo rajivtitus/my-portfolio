@@ -8,33 +8,74 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     }
 
+html {
+  scrollbar-color: darkgray black;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    }
+  ::-webkit-scrollbar-thumb {
+    background: darkgray;
+    border-radius: 10px; 
+    &:hover{
+      background: white; 
+      }
+    }
+
+    @media (max-width:1750px){
+      font-size: 90%;
+    }
+
+    @media (max-width:1550px){
+      font-size: 77%;
+    }
+}
+
 body {
   background: #030506;
   color: #ecf0f1;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   
   h1 {
-    font-size: 3.5rem;
-    font-family: 'Dosis', sans-serif;
+    font-size: 1.65rem;
+    font-weight: lighter;
+    letter-spacing: 6.5px;
+    font-family: 'Pattaya', sans-serif;
     }
   
   h2 {
-    font-size: 2.75rem;
-    padding-bottom: 1rem;
+    font-size: 4.5rem;
+    font-weight: 800;
     }
   
   h3 {
-    font-size: 1.75rem;
+    font-size: 3.25rem;
+    padding-bottom: 0.5rem;
     }
 
-  p {
-    font-size: 1.15rem;
+  p, li {
+    font-size: 1.45rem;
+    line-height: 1.65;    
     }
 
-    span {
+    input, label, textarea, button {
+      font-size: 1.35rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+  a {
+    text-decoration: none;
+    color: #ecf0f1;
+    }
+
+  span {
     color: #de354c;
-  }
+    } 
 }
+
+@media screen and (max-width:)
 
 `;
 

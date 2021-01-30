@@ -19,7 +19,7 @@ const Contact = () => {
       exit="exit"
     >
       <StyledForm>
-        <h2>Let's Talk</h2>
+        <h3>Let's Talk</h3>
         <p>
           Get in touch via the form below, or email{" "}
           <a
@@ -27,43 +27,49 @@ const Contact = () => {
             style={{ textDecoration: "none" }}
             target="_blank"
             rel="noopener noreferrer"
+            title="Send Email"
           >
             <span>rajivtitus92@gmail.com</span>
           </a>
         </p>
-        <form>
+        <form netlify>
           <div>
-            <label>Name:</label>
+            <label for="name">Name:</label>
             <input
               type="text"
               name="name"
+              id="name"
               placeholder="Enter your name"
               required
             />
           </div>
           <div>
-            <label>Email:</label>
+            <label for="email">Email:</label>
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Enter your email address"
               required
             />
           </div>
           <div>
-            <label>Message:</label>
+            <label for="message">Message:</label>
             <textarea
               name="message"
+              id="message"
               placeholder="Enter your message"
+              rows="5"
+              cols="30"
               required
             ></textarea>
           </div>
           <div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </StyledForm>
-      <Social>
+      {/* <Footer>
         <Hide>
           <motion.div
             className="social-contact"
@@ -75,6 +81,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
               target="_blank"
               rel="noopener noreferrer"
+              title="LinkedIn"
             >
               <img src={linkedin} alt="linkedin-icon"></img>
             </a>
@@ -83,78 +90,76 @@ const Contact = () => {
               href="https://github.com/rajivtitus"
               target="_blank"
               rel="noopener noreferrer"
+              title="GitHub"
             >
               <img src={github} alt="github-icon"></img>
             </a>
           </motion.div>
         </Hide>
-      </Social>
+      </Footer> */}
     </StyledContact>
   );
 };
 
 //Styled Components
-const StyledContact = styled(Container)`
-  align-items: flex-end;
-`;
+const StyledContact = styled(Container)``;
 
 const StyledForm = styled.div`
   flex: 1;
-
   form {
-    max-width: 500px;
-    padding: 0.5rem 0rem;
-    font-size: 1rem;
-
+    width: 45%;
+    padding: 1rem 0rem;
     div {
       padding: 0.75rem 0rem;
-
       input,
       textarea {
         display: block;
         width: 100%;
-        height: 1.5rem;
+        height: 3rem;
         background: #191919;
         color: #ecf0f1;
         border: none;
         padding: 1rem 0.5rem;
-        margin-top: 0.25rem;
+        margin-top: 0.5rem;
         border-radius: 10px;
-        font-family: "Roboto", sans-serif;
       }
-
       textarea {
-        height: 7.5rem;
+        height: 12.5rem;
         resize: none;
       }
-
       button {
         background: #191919;
         color: #de354c;
         border: none;
-        width: 100px;
-        line-height: 1.75rem;
-        text-align: center;
+        margin-top: 1rem;
+        width: 10rem;
         border-radius: 10px;
-        padding: 0.5rem 0.25rem;
-        font-size: 1.15rem;
-        font-weight: 500;
-        transition: 0.5s ease-out;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        transition: all 0.5s ease-out;
         &:hover {
           background: #de354c;
           color: #ecf0f1;
-          transition: 0.5s ease-out;
+          transition: all 0.5s ease-out;
         }
       }
+    }
+    //Media Queries for Form resizing
+    @media (max-width: 1152px) {
+      width: 55%;
+    }
+
+    @media (max-width: 798px) {
+      width: 85%;
     }
   }
 `;
 
-const Social = styled(motion.div)`
+const Footer = styled(motion.div)`
   flex: 1;
 
   .social-contact {
-    text-align: center;
+    text-align: right;
 
     a {
       padding: 1rem;

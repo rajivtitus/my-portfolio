@@ -10,31 +10,34 @@ const Nav = () => {
   const { pathname } = useLocation();
   return (
     <StyledNav>
+      <h1>
+        <Link to="/">Rajiv Titus</Link>
+      </h1>
       <ul>
-        <Link to="/">
-          <li>About</li>
+        <li>
+          <Link to="/">About</Link>
           <Line
             transition={{ duration: 0.8 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/" ? "90%" : "0%" }}
           />
-        </Link>
-        <Link to="/projects">
-          <li>Projects</li>
+        </li>
+        <li>
+          <Link to="/projects">Projects</Link>
           <Line
             transition={{ duration: 0.8 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/projects" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/projects" ? "90%" : "0%" }}
           />
-        </Link>
-        <Link to="/contact">
-          <li>Contact</li>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
           <Line
             transition={{ duration: 0.8 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/contact" ? "90%" : "0%" }}
           />
-        </Link>
+        </li>
       </ul>
     </StyledNav>
   );
@@ -43,31 +46,42 @@ const Nav = () => {
 //Styled Component for Nav Bar
 const StyledNav = styled.nav`
   min-height: 10vh;
-  display: flex;
-  padding: 0.5rem 7.5rem;
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 8rem;
   background: #030506;
+
+  @media (max-width: 1152px) {
+    padding: 1.75rem 5.5rem;
+  }
+
+  h1 {
+    flex: 1.5;
+    padding: 0.5rem 0rem;
+  }
 
   ul {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex: 1;
     list-style: none;
-    a {
-      margin-right: 12.5%;
-      text-decoration: none;
-      color: #ecf0f1;
-    }
     li {
-      padding: 0.25rem 1rem;
-      font-size: 1.25rem;
+      padding: 0.5rem 1rem;
+      position: relative;
     }
   }
 `;
 
 const Line = styled(motion.div)`
   height: 0.25rem;
-  width: 100%;
+  width: 0%;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
   background: #de354c;
 `;
 

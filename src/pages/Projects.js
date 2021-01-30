@@ -15,7 +15,7 @@ const Projects = () => {
     <motion.div variants={PageAnim} initial="hidden" animate="show" exit="exit">
       <Container>
         <div style={{ textAlign: "center" }}>
-          <h2 style={{ textAlign: "left" }}>Music Player</h2>
+          <h3 style={{ textAlign: "left" }}>Music Player</h3>
           <p style={{ textAlign: "left" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
             quaerat nisi nam ratione dignissimos, accusamus reprehenderit rerum
@@ -25,7 +25,7 @@ const Projects = () => {
           <img
             style={{
               width: "40%",
-              height: "70%",
+              height: "40vh",
               padding: "1rem 0rem",
               objectFit: "cover",
             }}
@@ -47,7 +47,7 @@ const Projects = () => {
         animate={controls}
       >
         <div style={{ textAlign: "center" }}>
-          <h2 style={{ textAlign: "left" }}>Music Player</h2>
+          <h3 style={{ textAlign: "left" }}>Music Player</h3>
           <p style={{ textAlign: "left" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
             quaerat nisi nam ratione dignissimos, accusamus reprehenderit rerum
@@ -57,7 +57,7 @@ const Projects = () => {
           <img
             style={{
               width: "40%",
-              height: "50vh",
+              height: "40vh",
               padding: "1rem 0rem",
               objectFit: "cover",
             }}
