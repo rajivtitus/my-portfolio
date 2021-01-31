@@ -1,6 +1,7 @@
 import React from "react";
 //Importing Styles
 import { Container } from "../styles/styles";
+import styled from "styled-components";
 //Importing animation variants
 import { PageAnim, FadeAnim } from "../animations/animations";
 //importing motion
@@ -13,7 +14,7 @@ const Projects = () => {
 
   return (
     <motion.div variants={PageAnim} initial="hidden" animate="show" exit="exit">
-      <Container>
+      <Project>
         <div style={{ textAlign: "center" }}>
           <h3 style={{ textAlign: "left" }}>Music Player</h3>
           <p style={{ textAlign: "left" }}>
@@ -39,8 +40,8 @@ const Projects = () => {
             molestias quod accusamus, natus reiciendis.
           </p>
         </div>
-      </Container>
-      <Container
+      </Project>
+      <Project
         ref={ref}
         variants={FadeAnim}
         initial="hidden"
@@ -71,9 +72,13 @@ const Projects = () => {
             molestias quod accusamus, natus reiciendis.
           </p>
         </div>
-      </Container>
+      </Project>
     </motion.div>
   );
 };
+
+const Project = styled(Container)`
+  background: linear-gradient(transparent, rgb(27, 27, 27, 1));
+`;
 
 export default Projects;

@@ -22,6 +22,10 @@ html {
       background: white; 
       }
     }
+   
+    @media (min-width:1925px) and (max-width:2560px){
+      font-size: 125%;
+    }
 
     @media (max-width:1750px){
       font-size: 90%;
@@ -29,7 +33,7 @@ html {
 
     @media (max-width:1550px){
       font-size: 77%;
-    }
+    }    
 }
 
 body {

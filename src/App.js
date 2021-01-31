@@ -20,17 +20,14 @@ const App = () => {
     <div>
       <GlobalStyle />
       <Nav />
-
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route exact path="/">
             <Home />
           </Route>
-
           <Route path="/projects">
             <Projects />
           </Route>
-
           <Route path="/contact">
             <Contact />
           </Route>

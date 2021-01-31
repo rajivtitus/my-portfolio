@@ -1,14 +1,10 @@
 import React from "react";
 //Importing Styles
-import { Container, Hide } from "../styles/styles";
+import { Container } from "../styles/styles";
 //importing Styled components
 import styled from "styled-components";
 //Importing animation variants
-import { PageAnim, SlideAnim } from "../animations/animations";
-import { motion } from "framer-motion";
-//importing social icons
-import linkedin from "../images/linkedin.png";
-import github from "../images/github.png";
+import { PageAnim } from "../animations/animations";
 
 const Contact = () => {
   return (
@@ -59,8 +55,6 @@ const Contact = () => {
               name="message"
               id="message"
               placeholder="Enter your message"
-              rows="5"
-              cols="30"
               required
             ></textarea>
           </div>
@@ -69,40 +63,14 @@ const Contact = () => {
           </div>
         </form>
       </StyledForm>
-      {/* <Footer>
-        <Hide>
-          <motion.div
-            className="social-contact"
-            variants={SlideAnim}
-            initial="hidden"
-            animate="show"
-          >
-            <a
-              href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn"
-            >
-              <img src={linkedin} alt="linkedin-icon"></img>
-            </a>
-
-            <a
-              href="https://github.com/rajivtitus"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="GitHub"
-            >
-              <img src={github} alt="github-icon"></img>
-            </a>
-          </motion.div>
-        </Hide>
-      </Footer> */}
     </StyledContact>
   );
 };
 
 //Styled Components
-const StyledContact = styled(Container)``;
+const StyledContact = styled(Container)`
+  min-height: 90vh;
+`;
 
 const StyledForm = styled.div`
   flex: 1;
@@ -151,18 +119,6 @@ const StyledForm = styled.div`
 
     @media (max-width: 798px) {
       width: 85%;
-    }
-  }
-`;
-
-const Footer = styled(motion.div)`
-  flex: 1;
-
-  .social-contact {
-    text-align: right;
-
-    a {
-      padding: 1rem;
     }
   }
 `;

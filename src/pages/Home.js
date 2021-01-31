@@ -59,6 +59,7 @@ const Description = styled(motion.div)`
     padding: 0.5rem 0rem;
   }
 
+  //Media Queries for Description resizing
   @media (max-width: 1152px) {
     width: 75%;
   }
