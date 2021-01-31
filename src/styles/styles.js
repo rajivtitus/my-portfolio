@@ -7,7 +7,7 @@ export const Container = styled(motion.div)`
   align-items: center;
   width: 100%;
   min-height: 90vh;
-  padding: 3.5rem 8rem;
+  padding: 2rem 8rem;
 
   @media (max-width: 1152px) {
     padding: 1.75rem 5.5rem;

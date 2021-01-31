@@ -53,6 +53,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   padding: 0.5rem 8rem;
   background: #030506;
+  border-bottom: 2.5px solid #191919;
 
   @media (max-width: 1152px) {
     padding: 1.75rem 5.5rem;
@@ -68,7 +69,6 @@ const StyledNav = styled.nav`
     align-items: center;
     justify-content: space-between;
     flex: 1;
-    list-style: none;
     li {
       padding: 0.5rem 1rem;
       position: relative;

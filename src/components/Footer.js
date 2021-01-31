@@ -12,44 +12,52 @@ import github from "../images/github.png";
 
 const Footer = () => {
   return (
-    <StyledFooter>
-      <Hide>
-        <motion.div
-          className="social-contact"
-          variants={SlideAnim}
-          initial="hidden"
-          animate="show"
-        >
-          <a
-            href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn"
-          >
-            <img src={linkedin} alt="linkedin-icon"></img>
-          </a>
-          <a
-            href="https://github.com/rajivtitus"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-          >
-            <img src={github} alt="github-icon"></img>
-          </a>
-        </motion.div>
-      </Hide>
-    </StyledFooter>
+    <Hide>
+      <StyledFooter
+        className="social-contact"
+        variants={SlideAnim}
+        initial="hidden"
+        animate="show"
+      >
+        <h1>Social:</h1>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+            >
+              <img src={linkedin} alt="linkedin-icon"></img>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/rajivtitus"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+            >
+              <img src={github} alt="github-icon"></img>
+            </a>
+          </li>
+        </ul>
+      </StyledFooter>
+    </Hide>
   );
 };
 
-const StyledFooter = styled(motion.div)`
-  flex: 1;
+const StyledFooter = styled(motion.footer)`
+  min-height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-  .social-contact {
-    text-align: right;
-
-    a {
-      padding: 1rem;
+  ul {
+    display: flex;
+    padding: 0rem 5rem 0rem 2.5rem;
+    li {
+      padding: 0rem 2rem;
     }
   }
 `;

@@ -15,30 +15,33 @@ const Projects = () => {
   return (
     <motion.div variants={PageAnim} initial="hidden" animate="show" exit="exit">
       <Project>
-        <div style={{ textAlign: "center" }}>
-          <h3 style={{ textAlign: "left" }}>Music Player</h3>
-          <p style={{ textAlign: "left" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            quaerat nisi nam ratione dignissimos, accusamus reprehenderit rerum
-            optio tempore architecto molestias. Voluptatibus fugit laborum, ipsa
-            quasi voluptatem dicta incidunt quia!
+        <div className="project-description">
+          <h3>Box Office Reviews</h3>
+          <p>
+            A web application which provides movie information for over 280,000
+            titles.
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Movie Review Project"
+            >
+              <span>{`View Project...`}</span>
+            </a>
           </p>
           <img
-            style={{
-              width: "40%",
-              height: "40vh",
-              padding: "1rem 0rem",
-              objectFit: "cover",
-            }}
             src="https://social-labs.org/wp-content/uploads/2015/07/teal-spectrum.png"
             alt="project1"
           ></img>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-            minus nulla blanditiis officiis libero harum impedit illum.
-            Laudantium atque, eius ducimus possimus provident, et explicabo
-            molestias quod accusamus, natus reiciendis.
-          </p>
+          <div className="project-technology">
+            <p>Built using React with Redux for state management.</p>
+            <p>
+              Libraries/APIs used: Motion Framer, Styled Components, React
+              Router DOM
+            </p>
+          </div>
         </div>
       </Project>
       <Project
@@ -47,30 +50,33 @@ const Projects = () => {
         initial="hidden"
         animate={controls}
       >
-        <div style={{ textAlign: "center" }}>
-          <h3 style={{ textAlign: "left" }}>Music Player</h3>
-          <p style={{ textAlign: "left" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            quaerat nisi nam ratione dignissimos, accusamus reprehenderit rerum
-            optio tempore architecto molestias. Voluptatibus fugit laborum, ipsa
-            quasi voluptatem dicta incidunt quia!
+        <div className="project-description">
+          <h3>Box Office Reviews</h3>
+          <p>
+            A web application which provides movie information for over 280,000
+            titles.
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Music Player Project"
+            >
+              <span>{`View Project...`}</span>
+            </a>
           </p>
           <img
-            style={{
-              width: "40%",
-              height: "40vh",
-              padding: "1rem 0rem",
-              objectFit: "cover",
-            }}
             src="https://social-labs.org/wp-content/uploads/2015/07/teal-spectrum.png"
-            alt="project2"
+            alt="project1"
           ></img>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-            minus nulla blanditiis officiis libero harum impedit illum.
-            Laudantium atque, eius ducimus possimus provident, et explicabo
-            molestias quod accusamus, natus reiciendis.
-          </p>
+          <div className="project-technology">
+            <p>Built using React with Redux for state management.</p>
+            <p>
+              Libraries/APIs used: Motion Framer, Styled Components, React
+              Router DOM
+            </p>
+          </div>
         </div>
       </Project>
     </motion.div>
@@ -79,6 +85,20 @@ const Projects = () => {
 
 const Project = styled(Container)`
   background: linear-gradient(transparent, rgb(27, 27, 27, 1));
+
+  .project-description {
+    img {
+      display: block;
+      width: 40%;
+      height: 40vh;
+      object-fit: cover;
+      margin: 1.5rem auto;
+    }
+  }
+
+  .project-technology {
+    text-align: center;
+  }
 `;
 
 export default Projects;

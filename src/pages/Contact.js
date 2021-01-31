@@ -5,78 +5,84 @@ import { Container } from "../styles/styles";
 import styled from "styled-components";
 //Importing animation variants
 import { PageAnim } from "../animations/animations";
+//importing Component
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    <StyledContact
-      variants={PageAnim}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-    >
-      <StyledForm>
-        <h3>Let's Talk</h3>
-        <p>
-          Get in touch via the form below, or email{" "}
-          <a
-            href="mailto:rajivtitus92@gmail.com"
-            style={{ textDecoration: "none" }}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Send Email"
-          >
-            <span>rajivtitus92@gmail.com</span>
-          </a>
-        </p>
-        <form netlify>
-          <div>
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email address"
-              required
-            />
-          </div>
-          <div>
-            <label for="message">Message:</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Enter your message"
-              required
-            ></textarea>
-          </div>
-          <div>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </StyledForm>
-    </StyledContact>
+    <>
+      <StyledContact
+        variants={PageAnim}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <StyledForm>
+          <h3>Let's Talk</h3>
+          <p>
+            Get in touch via the form below, or email{" "}
+            <a
+              href="mailto:rajivtitus92@gmail.com"
+              style={{ textDecoration: "none" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Send Email"
+            >
+              <span>rajivtitus92@gmail.com</span>
+            </a>
+          </p>
+          <form name="contact" netlify>
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+            <div>
+              <label for="message">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </StyledForm>
+      </StyledContact>
+      <Footer />
+    </>
   );
 };
 
 //Styled Components
 const StyledContact = styled(Container)`
-  min-height: 90vh;
+  min-height: 75vh;
+  padding-bottom: 0;
 `;
 
 const StyledForm = styled.div`
   flex: 1;
   form {
     width: 45%;
-    padding: 1rem 0rem;
+    padding-top: 1rem;
     div {
       padding: 0.75rem 0rem;
       input,

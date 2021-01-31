@@ -59,6 +59,10 @@ body {
     padding-bottom: 0.5rem;
     }
 
+  ul {
+    list-style: none;
+    }
+
   p, li {
     font-size: 1.45rem;
     line-height: 1.65;    
