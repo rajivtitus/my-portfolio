@@ -71,7 +71,7 @@ const StyledNav = styled.nav`
   padding: 0.5rem 8rem;
   background: #030506;
   border-bottom: 2.5px solid #191919;
-  z-index: 10;
+  z-index: 2;
 
   @media (max-width: 1152px) {
     padding: 0.5rem 5.5rem;
@@ -118,9 +118,10 @@ const StyledNav = styled.nav`
       flex: 1;
       flex-direction: column;
       justify-content: space-evenly;
-      padding: 2.5rem 0rem;
+      padding: 5rem 0rem;
       background: #030506;
       transition: all 1.25s ease-out;
+      z-index: 3;
       li {
         font-size: 3rem;
       }
@@ -130,6 +131,7 @@ const StyledNav = styled.nav`
     .nav-menu {
       cursor: pointer;
       position: relative;
+      z-index: 4;
       div {
         width: 3.5rem;
         height: 0.35rem;

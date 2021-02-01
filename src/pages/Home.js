@@ -69,7 +69,7 @@ const Description = styled(motion.div)`
   }
 
   @media (max-width: 802px) {
-    width: 95%;
+    width: 100%;
   }
 `;
 
