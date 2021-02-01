@@ -24,8 +24,11 @@ const Home = () => {
         </Hide>
         <motion.div variants={FadeAnim}>
           <motion.p>
-            A passionate Web Developer hailing from an Information Technology
+            A passionate Web Developer whose motto is to make navigation easy
+            and improve user engagement. I hail from an Information Technology
             background with experience in FinTech and the Retail industry.
+          </motion.p>
+          <motion.p>
             Problem-solving, relationship-building and excellence in service,
             are some of my key strengths.
           </motion.p>
@@ -33,10 +36,6 @@ const Home = () => {
             Throughout the course of my employment I developed new business
             ideas, provided relevant solutions to clients and had the pleasure
             of working in a collaberative environment.
-          </motion.p>
-          <motion.p>
-            My Web Development motto is to make navigation easy and improve user
-            engagement.
           </motion.p>
           <motion.p>
             <span>Fun Fact:</span> There's always room in my heart for an extra
@@ -51,7 +50,12 @@ const Home = () => {
 const StyledHome = styled(Container)`
   background: linear-gradient(transparent, rgb(0, 0, 0, 0.75)), url(${cover});
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 550px) {
+    background-position: 55%;
+  }
 `;
 const Description = styled(motion.div)`
   width: 62.5%;
@@ -64,7 +68,7 @@ const Description = styled(motion.div)`
     width: 75%;
   }
 
-  @media (max-width: 798px) {
+  @media (max-width: 802px) {
     width: 95%;
   }
 `;

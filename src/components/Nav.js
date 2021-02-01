@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //Importing Styled Components
 import styled from "styled-components";
 //Importing Link for routing between components
@@ -8,14 +8,22 @@ import { motion } from "framer-motion";
 
 const Nav = () => {
   const { pathname } = useLocation();
+  const [navBarStatus, setNavBarStatus] = useState(false);
+
+  const navBarHandler = () => {
+    setNavBarStatus(!navBarStatus);
+  };
+
   return (
     <StyledNav>
       <h1>
         <Link to="/">Rajiv Titus</Link>
       </h1>
-      <ul>
+      <ul className={`${navBarStatus ? "nav-open" : ""}`}>
         <li>
-          <Link to="/">About</Link>
+          <Link to="/" onClick={navBarHandler}>
+            About
+          </Link>
           <Line
             transition={{ duration: 0.8 }}
             initial={{ width: "0%" }}
@@ -23,7 +31,9 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects" onClick={navBarHandler}>
+            Projects
+          </Link>
           <Line
             transition={{ duration: 0.8 }}
             initial={{ width: "0%" }}
@@ -31,7 +41,9 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={navBarHandler}>
+            Contact
+          </Link>
           <Line
             transition={{ duration: 0.8 }}
             initial={{ width: "0%" }}
@@ -39,6 +51,11 @@ const Nav = () => {
           />
         </li>
       </ul>
+      <div onClick={navBarHandler} className="nav-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </StyledNav>
   );
 };
@@ -54,9 +71,23 @@ const StyledNav = styled.nav`
   padding: 0.5rem 8rem;
   background: #030506;
   border-bottom: 2.5px solid #191919;
+  z-index: 10;
 
   @media (max-width: 1152px) {
-    padding: 1.75rem 5.5rem;
+    padding: 0.5rem 5.5rem;
+  }
+
+  @media (max-width: 802px) {
+    padding: 0.35rem 3.75rem;
+  }
+
+  @media (max-width: 550px) {
+    padding: 0.25rem 2.85rem;
+  }
+
+  //Fixing Nav Bar to top of the page in tablet and mobile
+  @media (max-width: 1025px) {
+    position: static;
   }
 
   h1 {
@@ -72,6 +103,43 @@ const StyledNav = styled.nav`
     li {
       padding: 0.5rem 1rem;
       position: relative;
+    }
+  }
+
+  //Media query for Mobile Navbar
+  @media (max-width: 1025px) {
+    ul {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      flex-direction: column;
+      bottom: 0%;
+      left: 125%;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 2.5rem 0rem;
+      background: #030506;
+      transition: all 1.25s ease-out;
+      li {
+        font-size: 3rem;
+      }
+    }
+
+    //Toggle Nav bar on and off
+    .nav-menu {
+      cursor: pointer;
+      position: relative;
+      div {
+        width: 3.5rem;
+        height: 0.35rem;
+        margin: 0.65rem;
+        background: white;
+      }
+    }
+    .nav-open {
+      left: 0%;
+      transition: all 0.75s ease-out;
     }
   }
 `;

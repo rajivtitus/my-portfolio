@@ -31,9 +31,9 @@ const Contact = () => {
               <span>rajivtitus92@gmail.com</span>
             </a>
           </p>
-          <form name="contact" netlify>
+          <form name="contact" method="POST" data-netlify="true">
             <div>
-              <label for="name">Name:</label>
+              <label htmlFor="name">Name:</label>
               <input
                 type="text"
                 name="name"
@@ -43,7 +43,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label for="email">Email:</label>
+              <label htmlFor="email">Email:</label>
               <input
                 type="email"
                 name="email"
@@ -53,7 +53,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label for="message">Message:</label>
+              <label htmlFor="message">Message:</label>
               <textarea
                 name="message"
                 id="message"
@@ -75,6 +75,7 @@ const Contact = () => {
 //Styled Components
 const StyledContact = styled(Container)`
   min-height: 75vh;
+  padding-top: 1rem;
   padding-bottom: 0;
 `;
 
@@ -84,7 +85,7 @@ const StyledForm = styled.div`
     width: 45%;
     padding-top: 1rem;
     div {
-      padding: 0.75rem 0rem;
+      padding: 0.5rem 0rem;
       input,
       textarea {
         display: block;
@@ -93,7 +94,7 @@ const StyledForm = styled.div`
         background: #191919;
         color: #ecf0f1;
         border: none;
-        padding: 1rem 0.5rem;
+        padding: 0.5rem;
         margin-top: 0.5rem;
         border-radius: 10px;
       }
@@ -105,8 +106,8 @@ const StyledForm = styled.div`
         background: #191919;
         color: #de354c;
         border: none;
-        margin-top: 1rem;
         width: 10rem;
+        margin-top: 1rem;
         border-radius: 10px;
         padding: 1rem 2rem;
         font-weight: 800;

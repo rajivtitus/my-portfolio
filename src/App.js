@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import ScrollTop from "./components/ScrollTop";
 
 //Importing Global Stlyes
 import GlobalStyle from "./styles/GlobalStyle";
@@ -33,6 +34,7 @@ const App = () => {
           </Route>
         </Switch>
       </AnimatePresence>
+      <ScrollTop />
     </div>
   );
 };

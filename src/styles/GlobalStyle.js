@@ -9,11 +9,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
 html {
-  scrollbar-color: darkgray black;
+  scrollbar-color: darkgray white;
   scrollbar-width: thin;
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 7.5px;
     }
   ::-webkit-scrollbar-thumb {
     background: darkgray;
@@ -24,7 +24,7 @@ html {
     }
    
     @media (min-width:1925px) and (max-width:2560px){
-      font-size: 125%;
+      font-size: 115%;
     }
 
     @media (max-width:1750px){
@@ -33,6 +33,10 @@ html {
 
     @media (max-width:1550px){
       font-size: 77%;
+    }
+
+    @media (max-width:550px){
+      font-size: 70.5%;
     }    
 }
 
@@ -45,7 +49,7 @@ body {
   h1 {
     font-size: 1.65rem;
     font-weight: lighter;
-    letter-spacing: 6.5px;
+    letter-spacing: 4.5px;
     font-family: 'Pattaya', sans-serif;
     }
   
@@ -65,7 +69,7 @@ body {
 
   p, li {
     font-size: 1.45rem;
-    line-height: 1.65;    
+    line-height: 155%; 
     }
 
     input, label, textarea, button {

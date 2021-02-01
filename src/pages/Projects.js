@@ -8,6 +8,9 @@ import { PageAnim, FadeAnim } from "../animations/animations";
 import { motion } from "framer-motion";
 //importing useScroll function for scroll animations
 import { useScroll } from "../components/useScroll";
+//importing images
+import projectimage1 from "../images/Box Office Review - Project Image.jpg";
+import projectimage2 from "../images/Swirl Music Player - Project Image.jpg";
 
 const Projects = () => {
   const [controls, ref] = useScroll();
@@ -18,30 +21,32 @@ const Projects = () => {
         <div className="project-description">
           <h3>Box Office Reviews</h3>
           <p>
-            A web application which provides movie information for over 280,000
-            titles.
+            A web application which provides movie reviews and ratings for over
+            280,000 titles.
+          </p>
+          <br />
+          <p>
+            Built using React JS with Redux for state management.
+            <br />
+            Libraries/APIs used: Motion Framer, Styled Components, React Router
+            DOM
           </p>
           <p>
             <a
-              href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
+              href="https://youthful-hopper-cd14e7.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
-              title="Movie Review Project"
+              title="Box Office Movie Reviews"
             >
               <span>{`View Project...`}</span>
             </a>
           </p>
+        </div>
+        <div className="project-image">
           <img
-            src="https://social-labs.org/wp-content/uploads/2015/07/teal-spectrum.png"
-            alt="project1"
+            src={projectimage1}
+            alt="Box Office Movie Reviews Project Cover"
           ></img>
-          <div className="project-technology">
-            <p>Built using React with Redux for state management.</p>
-            <p>
-              Libraries/APIs used: Motion Framer, Styled Components, React
-              Router DOM
-            </p>
-          </div>
         </div>
       </Project>
       <Project
@@ -51,32 +56,27 @@ const Projects = () => {
         animate={controls}
       >
         <div className="project-description">
-          <h3>Box Office Reviews</h3>
+          <h3>Swirl Music Player</h3>
+          <p>Music player with pre-loaded tunes to help you unwind.</p>
+          <br />
           <p>
-            A web application which provides movie information for over 280,000
-            titles.
+            Built using React JS
+            <br />
+            Libraries/APIs used: FontAwesome and SASS
           </p>
           <p>
             <a
-              href="https://www.linkedin.com/in/rajiv-christopher-bsc-pdd-in-it-6626a6a7/"
+              href="https://loving-blackwell-f3b69d.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              title="Music Player Project"
+              title="Swirl Music Player Project"
             >
               <span>{`View Project...`}</span>
             </a>
           </p>
-          <img
-            src="https://social-labs.org/wp-content/uploads/2015/07/teal-spectrum.png"
-            alt="project1"
-          ></img>
-          <div className="project-technology">
-            <p>Built using React with Redux for state management.</p>
-            <p>
-              Libraries/APIs used: Motion Framer, Styled Components, React
-              Router DOM
-            </p>
-          </div>
+        </div>
+        <div className="project-image">
+          <img src={projectimage2} alt="Swirl Music Player Cover"></img>
         </div>
       </Project>
     </motion.div>
@@ -85,19 +85,37 @@ const Projects = () => {
 
 const Project = styled(Container)`
   background: linear-gradient(transparent, rgb(27, 27, 27, 1));
+  flex-direction: column;
+  align-items: flex-start;
 
   .project-description {
-    img {
-      display: block;
-      width: 40%;
-      height: 40vh;
-      object-fit: cover;
-      margin: 1.5rem auto;
-    }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .project-technology {
-    text-align: center;
+  .project-image {
+    flex: 1;
+    width: 100%;
+    img {
+      display: block;
+      width: 55%;
+      object-fit: contain;
+      margin: 3.5rem auto;
+
+      //Resizing Project images for tablet
+      @media (max-width: 1025px) {
+        width: 75%;
+        min-height: 40vh;
+      }
+
+      //Resizing Project images for mobile
+      @media (max-width: 550px) {
+        width: 80%;
+        min-height: 30vh;
+      }
+    }
   }
 `;
 

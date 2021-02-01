@@ -52,12 +52,21 @@ const StyledFooter = styled(motion.footer)`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 0rem 5rem 2.5rem 5rem;
 
   ul {
     display: flex;
-    padding: 0rem 5rem 0rem 2.5rem;
     li {
       padding: 0rem 2rem;
+    }
+  }
+  //Resizing footer for mobile devices
+  @media (max-width: 550px) {
+    justify-content: center;
+    padding: 2.5rem;
+    gap: 2.5rem;
+    img {
+      width: 75%;
     }
   }
 `;
