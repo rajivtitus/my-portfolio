@@ -32,12 +32,9 @@ html {
     }
 
     @media (max-width:1550px){
-      font-size: 77%;
+      font-size: 78%;
     }
-
-    @media (max-width:550px){
-      font-size: 70.5%;
-    }    
+    
 }
 
 body {
