@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
 html {
+  scroll-behavior: smooth;
   scrollbar-color: darkgray white;
   scrollbar-width: thin;
 
@@ -60,11 +61,7 @@ body {
     padding-bottom: 0.5rem;
     }
 
-  ul {
-    list-style: none;
-    }
-
-  p, li {
+  p, li{
     font-size: 1.45rem;
     line-height: 155%; 
     }
@@ -83,8 +80,6 @@ body {
     color: #de354c;
     } 
 }
-
-@media screen and (max-width:)
 
 `;
 

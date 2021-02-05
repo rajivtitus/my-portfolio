@@ -43,10 +43,13 @@ const Projects = () => {
           </p>
         </div>
         <div className="project-image">
-          <img
+          <motion.img
+            variants={FadeAnim}
+            initial="hidden"
+            animate="show"
             src={projectimage1}
             alt="Box Office Movie Reviews Project Cover"
-          ></img>
+          ></motion.img>
         </div>
       </Project>
       <Project

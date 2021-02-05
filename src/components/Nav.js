@@ -99,6 +99,7 @@ const StyledNav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    list-style: none;
     flex: 1;
     li {
       padding: 0.5rem 1rem;

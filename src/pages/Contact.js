@@ -31,7 +31,13 @@ const Contact = () => {
               <span>rajivtitus92@gmail.com</span>
             </a>
           </p>
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <div>
               <label htmlFor="name">Name:</label>
               <input
@@ -74,7 +80,7 @@ const Contact = () => {
 
 //Styled Components
 const StyledContact = styled(Container)`
-  min-height: 75vh;
+  min-height: 80vh;
   padding-top: 1rem;
   padding-bottom: 0;
 `;
