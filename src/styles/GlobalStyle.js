@@ -60,6 +60,11 @@ body {
     font-size: 3.25rem;
     padding-bottom: 0.5rem;
     }
+  
+  ul {
+    list-style: none;
+    }
+    
 
   p, li{
     font-size: 1.45rem;
