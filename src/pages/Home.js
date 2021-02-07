@@ -30,11 +30,11 @@ const Home = () => {
             <motion.p>
               I am a passionate Front End Developer with an Information
               Technology background and experience in Finance and Customer
-              Service. My Web Development motto is to make navigation easy and
+              Service. My web development motto is to make navigation easy and
               improve user engagement.
             </motion.p>
             <motion.a href="#about-me">
-              <span>Learn More...</span>
+              <span>Learn more...</span>
             </motion.a>
           </motion.div>
         </Description>
@@ -48,18 +48,18 @@ const Home = () => {
       >
         <h3>About Me</h3>
         <p>
-          Throughout my professional career, I worked in Finance and Customer
-          Support. I enjoyed building relationships with customers and helping
-          them solve their problems by providing relevant financial solutions
-          catered to their needs/offering product recommendations.
+          Throughout my professional career, I enjoyed building relationships
+          with customers and helping them solve their problems by providing
+          relevant financial solutions catered to their needs/offering product
+          recommendations.
         </p>
         <p>My key strengths include:</p>
         <ul>
-          <li>Creative Problem Solving</li>
-          <li>Relationship Building</li>
-          <li>Customer Satisfaction</li>
-          <li>Front End Design</li>
-          <li>Team Work</li>
+          <li>Front end design</li>
+          <li>Creative problem solving</li>
+          <li>Relationship building</li>
+          <li>Customer satisfaction</li>
+          <li>Team work</li>
         </ul>
         <p>
           In addition to my experience, I have a degree and a diploma in
@@ -68,8 +68,8 @@ const Home = () => {
         </p>
         <br />
         <p>
-          <span>Fun fact:</span> There's always room in my heart for an extra
-          slice of pizza, dogs, travel and music.
+          <span>Fun fact:</span> There's always room in my heart for &#127829;,
+          &#128054;, &#9992;&#65039; and &#127925;.
         </p>
       </AboutMe>
     </motion.div>
@@ -93,7 +93,6 @@ const Description = styled(motion.div)`
   }
   a {
     font-size: 1.55rem;
-    font-weight: 600;
   }
 
   //Media Queries for Description resizing

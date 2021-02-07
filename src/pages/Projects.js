@@ -24,13 +24,14 @@ const Projects = () => {
             A web application which provides movie reviews and ratings for over
             280,000 titles.
           </p>
-          <br />
+
           <p>
-            Built using React JS with Redux for state management.
+            Built using OMDB API with React JS and Redux.
             <br />
             Libraries/APIs used: Motion Framer, Styled Components, React Router
             DOM
           </p>
+          <br />
           <p>
             <a
               href="https://youthful-hopper-cd14e7.netlify.app"
@@ -61,12 +62,13 @@ const Projects = () => {
         <div className="project-description">
           <h3>Swirl Music Player</h3>
           <p>Music player with pre-loaded tunes to help you unwind.</p>
-          <br />
+
           <p>
-            Built using React JS
+            Built using React JS and SASS
             <br />
-            Libraries/APIs used: FontAwesome and SASS
+            Libraries used: FontAwesome
           </p>
+          <br />
           <p>
             <a
               href="https://loving-blackwell-f3b69d.netlify.app/"
