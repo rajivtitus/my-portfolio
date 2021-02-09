@@ -29,8 +29,8 @@ const Home = () => {
           <motion.div variants={FadeAnim}>
             <motion.p>
               I am a passionate Front End Developer with an Information
-              Technology background and experience in Finance and Customer
-              Service. My web development motto is to make navigation easy and
+              Technology background and experience in sales and customer
+              service. My web development motto is to make navigation easy and
               improve user engagement.
             </motion.p>
             <motion.a href="#about-me">
@@ -50,8 +50,8 @@ const Home = () => {
         <p>
           Throughout my professional career, I enjoyed building relationships
           with customers and helping them solve their problems by providing
-          relevant financial solutions catered to their needs/offering product
-          recommendations.
+          relevant financial solutions catered to their needs and offering the
+          product recommendations.
         </p>
         <p>My key strengths include:</p>
         <ul>
@@ -63,8 +63,8 @@ const Home = () => {
         </ul>
         <p>
           In addition to my experience, I have a degree and a diploma in
-          Information Technology where I gained knowledge of web technologies,
-          database management and design principles.
+          Information Technology where I gained knowledge of various web
+          technologies, database management and design principles.
         </p>
         <br />
         <p>
