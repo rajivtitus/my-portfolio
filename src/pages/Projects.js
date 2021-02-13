@@ -11,9 +11,11 @@ import { useScroll } from "../components/useScroll";
 //importing images
 import projectimage1 from "../images/Box Office Review - Project Image.jpg";
 import projectimage2 from "../images/Swirl Music Player - Project Image.jpg";
+import projectimage3 from "../images/Palette Picker - Project Image.PNG";
 
 const Projects = () => {
-  const [controls, ref] = useScroll();
+  const [controls1, ref1] = useScroll();
+  const [controls2, ref2] = useScroll();
 
   return (
     <motion.div variants={PageAnim} initial="hidden" animate="show" exit="exit">
@@ -26,7 +28,7 @@ const Projects = () => {
           </p>
 
           <p>
-            Built using OMDB API with React JS and Redux.
+            Built using the OMDB API with React JS and Redux.
             <br />
             Libraries/APIs used: Motion Framer, Styled Components, React Router
             DOM
@@ -44,20 +46,17 @@ const Projects = () => {
           </p>
         </div>
         <div className="project-image">
-          <motion.img
-            variants={FadeAnim}
-            initial="hidden"
-            animate="show"
+          <img
             src={projectimage1}
             alt="Box Office Movie Reviews Project Cover"
-          ></motion.img>
+          ></img>
         </div>
       </Project>
       <Project
-        ref={ref}
+        ref={ref1}
         variants={FadeAnim}
         initial="hidden"
-        animate={controls}
+        animate={controls1}
       >
         <div className="project-description">
           <h3>Swirl Music Player</h3>
@@ -82,6 +81,39 @@ const Projects = () => {
         </div>
         <div className="project-image">
           <img src={projectimage2} alt="Swirl Music Player Cover"></img>
+        </div>
+      </Project>
+      <Project
+        ref={ref2}
+        variants={FadeAnim}
+        initial="hidden"
+        animate={controls2}
+      >
+        <div className="project-description">
+          <h3>Palette Picker</h3>
+          <p>
+            Choose and save custom palettes from a list of dyanimcally generated
+            colors.
+          </p>
+          <p>
+            Built using Vanilla JS, HTML and CSS.
+            <br />
+            Libraries used: Chroma JS and FontAwesome
+          </p>
+          <br />
+          <p>
+            <a
+              href="https://festive-shirley-fcfffd.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Color Palette Picker"
+            >
+              <span>{`View Project...`}</span>
+            </a>
+          </p>
+        </div>
+        <div className="project-image">
+          <img src={projectimage3} alt="Swirl Music Player Cover"></img>
         </div>
       </Project>
     </motion.div>
