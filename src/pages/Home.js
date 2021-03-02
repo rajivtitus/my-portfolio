@@ -28,10 +28,8 @@ const Home = () => {
           </Hide>
           <motion.div variants={FadeAnim}>
             <motion.p>
-              I am a passionate Front End Developer with an Information
-              Technology background and experience in sales and customer
-              service. My web development motto is to make navigation easy and
-              improve user engagement.
+              I am a passionate Web Developer with an Information Technology background and experience in sales and
+              customer service. My web development motto is to make navigation easy and improve user engagement.
             </motion.p>
             <motion.a href="#about-me">
               <span>Learn more...</span>
@@ -39,19 +37,12 @@ const Home = () => {
           </motion.div>
         </Description>
       </StyledHome>
-      <AboutMe
-        id="about-me"
-        ref={ref}
-        variants={FadeAnim}
-        initial="hidden"
-        animate={controls}
-      >
+      <AboutMe id="about-me" ref={ref} variants={FadeAnim} initial="hidden" animate={controls}>
         <h3>About Me</h3>
         <p>
-          Throughout my professional career, I enjoyed building relationships
-          with customers and helping them solve their problems by providing
-          relevant financial solutions catered to their needs and offering the
-          product recommendations.
+          Throughout my professional career, I enjoyed building relationships with customers and helping them solve
+          their problems by providing relevant financial solutions catered to their needs and offering the product
+          recommendations.
         </p>
         <p>My key strengths include:</p>
         <ul>
@@ -62,14 +53,13 @@ const Home = () => {
           <li>Team work</li>
         </ul>
         <p>
-          In addition to my experience, I have a degree and a diploma in
-          Information Technology where I gained knowledge of various web
-          technologies, database management and design principles.
+          In addition to my experience, I have a degree and a diploma in Information Technology where I gained knowledge
+          of various web technologies, database management and design principles.
         </p>
         <br />
         <p>
-          <span>Fun fact:</span> There's always room in my heart for &#127829;,
-          &#128054;, &#9992;&#65039; and &#127925;.
+          <span>Fun fact:</span> There's always room in my heart for &#127829;, &#128054;, &#9992;&#65039; and
+          &#127925;.
         </p>
       </AboutMe>
     </motion.div>
