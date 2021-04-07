@@ -10,6 +10,7 @@ import { PageAnim, SlideAnim, FadeAnim } from "../animations/animations";
 import { useScroll } from "../components/useScroll";
 //importing image
 import cover from "../images/cover.jpg";
+import resume from '../images/Rajiv Christopher - Resume.pdf'
 
 const Home = () => {
   const [controls, ref] = useScroll();
@@ -32,7 +33,10 @@ const Home = () => {
               customer service. My web development motto is to make navigation easy and improve user engagement.
             </motion.p>
             <motion.a href="#about-me">
-              <span>Learn more...</span>
+              <button>Learn More</button>
+            </motion.a>
+            <motion.a href={resume} download>
+              <button>View Resume</button>
             </motion.a>
           </motion.div>
         </Description>
@@ -83,6 +87,9 @@ const Description = styled(motion.div)`
   }
   a {
     font-size: 1.55rem;
+  }
+  button {
+    margin-right: 1.75rem;
   }
 
   //Media Queries for Description resizing

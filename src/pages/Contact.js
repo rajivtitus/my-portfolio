@@ -103,22 +103,6 @@ const StyledForm = styled.div`
         height: 12.5rem;
         resize: none;
       }
-      button {
-        background: #191919;
-        color: #de354c;
-        border: none;
-        width: 10rem;
-        margin-top: 1rem;
-        border-radius: 10px;
-        padding: 1rem 2rem;
-        font-weight: 800;
-        transition: all 0.5s ease-out;
-        &:hover {
-          background: #de354c;
-          color: #ecf0f1;
-          transition: all 0.5s ease-out;
-        }
-      }
     }
     //Media Queries for Form resizing
     @media (max-width: 1152px) {
