@@ -83,7 +83,7 @@ const StyledContact = styled(Container)`
 const StyledForm = styled.div`
   flex: 1;
   form {
-    width: 45%;
+    width: 42.5%;
     padding-top: 1rem;
     div {
       padding: 0.5rem 0rem;
@@ -100,7 +100,7 @@ const StyledForm = styled.div`
         border-radius: 10px;
       }
       textarea {
-        height: 12.5rem;
+        height: 11.5rem;
         resize: none;
       }
     }

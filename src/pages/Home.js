@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 import { PageAnim, SlideAnim, FadeAnim } from "../animations/animations";
 import { useScroll } from "../components/useScroll";
 //importing image
-import cover from "../images/cover.jpg";
-import resume from '../images/Rajiv Christopher - Resume.pdf'
+import cover from "../assets/cover.jpg";
+import resume from '../assets/Rajiv Christopher - Resume.pdf'
 
 const Home = () => {
   const [controls, ref] = useScroll();
@@ -29,8 +29,7 @@ const Home = () => {
           </Hide>
           <motion.div variants={FadeAnim}>
             <motion.p>
-              I am a passionate Web Developer with an Information Technology background and experience in sales and
-              customer service. My web development motto is to make navigation easy and improve user engagement.
+              I am a passionate Web Developer with an Information Technology background who loves solving problems and building interactive experiences.
             </motion.p>
             <motion.a href="#about-me">
               <button>Learn More</button>
@@ -44,17 +43,17 @@ const Home = () => {
       <AboutMe id="about-me" ref={ref} variants={FadeAnim} initial="hidden" animate={controls}>
         <h3>About Me</h3>
         <p>
-          Throughout my professional career, I enjoyed building relationships with customers and helping them solve
+          Throughout my professional career, I worked in financial/retail sales and customer service where I enjoyed building relationships with customers and helping them solve
           their problems by providing relevant financial solutions catered to their needs and offering the product
           recommendations.
         </p>
         <p>My key strengths include:</p>
         <ul>
-          <li>Front end design</li>
+          <li>Responsive Web Development</li>
           <li>Creative problem solving</li>
           <li>Relationship building</li>
-          <li>Customer satisfaction</li>
-          <li>Team work</li>
+          <li>Time Management</li>
+          <li>Teamwork</li>
         </ul>
         <p>
           In addition to my experience, I have a degree and a diploma in Information Technology where I gained knowledge

@@ -7,8 +7,8 @@ import styled from "styled-components";
 import { SlideAnim } from "../animations/animations";
 import { motion } from "framer-motion";
 //importing social icons
-import linkedin from "../images/linkedin.png";
-import github from "../images/github.png";
+import linkedin from "../assets/linkedin.png";
+import github from "../assets/github.png";
 
 const Footer = () => {
   return (
@@ -52,7 +52,7 @@ const StyledFooter = styled(motion.footer)`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0rem 5rem 2.5rem 5rem;
+  padding: 1rem 5rem;
 
   ul {
     display: flex;

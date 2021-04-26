@@ -112,7 +112,6 @@ const StyledNav = styled.nav`
       height: 100vh;
       width: 100%;
       position: fixed;
-      flex-direction: column;
       bottom: 0%;
       left: 125%;
       flex: 1;
